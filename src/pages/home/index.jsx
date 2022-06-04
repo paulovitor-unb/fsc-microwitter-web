@@ -29,10 +29,6 @@ const TweetForm = ({ loggedinUser, onSuccess }) => {
         }
     })
 
-    function changeText(e) {
-        setText(e.target.value)
-    }
-
     return (
         <div className="p-4 space-y-6 border-b border-brandSilver">
             <div className="flex space-x-5">
@@ -119,7 +115,7 @@ export const Home = ({ loggedinUser }) => {
         <>
             <TweetForm loggedinUser={loggedinUser} onSuccess={getData} />
             <div>
-                {data.length &&
+                {(data.length &&
                     data.map(tweet => (
                         <Tweet
                             key={tweet.id}
@@ -131,7 +127,8 @@ export const Home = ({ loggedinUser }) => {
                         >
                             {tweet.text}
                         </Tweet>
-                    ))}
+                    ))) ||
+                    []}
             </div>
         </>
     )
