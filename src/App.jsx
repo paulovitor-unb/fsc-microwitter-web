@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-import { Home } from "./home"
-import { Login } from "./login"
-import { Signup } from "./signup"
+import { Home } from "./pages/home"
+import { Login } from "./pages/login"
+import { Signup } from "./pages/signup"
 
 export function App() {
     const [user, setUser] = useState()

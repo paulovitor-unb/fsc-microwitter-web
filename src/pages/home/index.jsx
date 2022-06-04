@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
-import { BadgeCheckIcon } from "@heroicons/react/solid"
-import { HeartIcon } from "@heroicons/react/outline"
 import { useFormik } from "formik"
 import axios from "axios"
+
+import { avatar } from "../../assets/avatar.png"
+import { BadgeCheckIcon } from "@heroicons/react/solid"
+import { HeartIcon } from "@heroicons/react/outline"
 
 const TweetForm = ({ loggedinUser, onSuccess }) => {
     const MAX_TWEET_CHARS = 140
@@ -36,7 +38,7 @@ const TweetForm = ({ loggedinUser, onSuccess }) => {
             <div className="flex space-x-5">
                 <img
                     className="w-7"
-                    src="./src/home/avatar.png"
+                    src={avatar}
                     alt="Avatar placeholder small"
                 />
                 <h1 className="font-bold text-xl">Página Inicial</h1>
