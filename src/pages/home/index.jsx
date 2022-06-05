@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useFormik } from "formik"
 import axios from "axios"
 
-import Avatar from "../../assets/avatar.png"
+import Avatar from "/public/assets/avatar.png"
 import { BadgeCheckIcon } from "@heroicons/react/solid"
 import { HeartIcon } from "@heroicons/react/outline"
 
@@ -32,11 +32,7 @@ const TweetForm = ({ loggedinUser, onSuccess }) => {
     return (
         <div className="p-4 space-y-6 border-b border-brandSilver">
             <div className="flex space-x-5">
-                <img
-                    className="w-7"
-                    src="/assets/avatar.png"
-                    alt="Avatar icon"
-                />
+                <img className="w-7" src={Avatar} alt="Avatar icon" />
                 <h1 className="font-bold text-xl">Página Inicial</h1>
             </div>
             <form
@@ -121,7 +117,7 @@ export const Home = ({ loggedinUser }) => {
                             key={tweet.id}
                             name={tweet.user.name}
                             username={tweet.user.username}
-                            avatar="../../assets/avatar.png"
+                            avatar="../../../public/assets/avatar.png"
                             alt="Avatar icon"
                             likes="1.2k"
                         >
