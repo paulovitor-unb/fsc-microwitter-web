@@ -117,7 +117,7 @@ export const Home = ({ loggedinUser }) => {
                             key={tweet.id}
                             name={tweet.user.name}
                             username={tweet.user.username}
-                            avatar="../../../public/assets/avatar.png"
+                            avatar={Avatar}
                             alt="Avatar icon"
                             likes="1.2k"
                         >
