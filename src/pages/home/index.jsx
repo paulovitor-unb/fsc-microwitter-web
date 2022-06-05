@@ -34,8 +34,8 @@ const TweetForm = ({ loggedinUser, onSuccess }) => {
             <div className="flex space-x-5">
                 <img
                     className="w-7"
-                    src={Avatar}
-                    alt="Avatar placeholder small"
+                    src="./src/assets/avatar.png"
+                    alt="Avatar icon"
                 />
                 <h1 className="font-bold text-xl">Página Inicial</h1>
             </div>
